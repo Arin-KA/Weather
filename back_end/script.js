@@ -3,6 +3,7 @@ const https=require("https");
 const bodyParser=require("body-parser");
 const app=express();
 app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.json());
 app.get("/", function(req, res){
     res.redirect("https://weather-5vjm.vercel.app/");
     
